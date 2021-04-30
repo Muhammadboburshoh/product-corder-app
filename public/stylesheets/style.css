@@ -1,0 +1,63 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+select {
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #9cdef8;
+  padding: 20px;
+  border: 2px solid #00B7FF;
+  border-radius: 10px;
+  margin: 10px;
+  width: 300px;
+}
+
+img {
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  background-color: rgb(61, 199, 218);
+  border: 2px solid rgb(106, 106, 204);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Buyurma berish</h1>
+
+    <h3>Mahsulotlar:</h3>
+
+    <ul>
+      <% for(let product of products) { %>
+        <li data-id="<%=product.product_id%>" id="product_item">
+          <img src="https://picsum.photos/id/877/200/150" alt="<%= product.product_name %>">
+          <span> <b>Product Name: </b><%= product.product_name %></span>
+          <span><b>Product Price: </b><%= product.product_price %></span>
+
+          <h4>Table Number:</h4>
+          <select name="tables" id="table">
+            <% for(let table of tables) { %>
+              <option id="table_number" value="<%= table.table_id%>"><%= table.table_number%></option>
+            <% } %>
+          </select>
+
+          <button id="order_button" type="submit">Buyurtma</button>
+        </li>
+      <% } %>
+    </ul>
+
+
+    <script src="../javascripts/home.js"></script>
+  </body>
+</html>
