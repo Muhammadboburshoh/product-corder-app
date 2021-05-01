@@ -37,8 +37,6 @@ router.post('/', async function(req, res, next) {
     res.send('Buyurtma berishda mupmmo bo\'ldi qaytadan urinib ko\'ring')
   }
 
-  // console.log(newOrder)
-
 });
 
 module.exports = router;

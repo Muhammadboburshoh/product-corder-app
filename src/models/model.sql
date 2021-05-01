@@ -29,3 +29,17 @@ insert into tables(table_number) values
 (4),
 (5),
 (6);
+
+select
+  o.order_id,
+  t.table_number,
+  p.product_name as name,
+  p.product_price as price,
+  p.product_photo as photo
+from
+  orders as o
+join
+  products as p on p.product_id = o.product_id
+join
+  tables as t on t.table_id = o.table_id
+;

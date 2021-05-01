@@ -12,7 +12,8 @@
     <ul>
       <% for(let product of products) { %>
         <li data-id="<%=product.product_id%>" id="product_item">
-          <img src="https://picsum.photos/id/877/200/150" alt="<%= product.product_name %>">
+          <img src="./images/<%= product.product_photo%>.png"
+          width="200" height="150"  alt="<%= product.product_name %>">
           <span> <b>Product Name: </b><%= product.product_name %></span>
           <span><b>Product Price: </b><%= product.product_price %></span>
 
