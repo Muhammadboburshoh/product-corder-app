@@ -43,3 +43,17 @@ join
 join
   tables as t on t.table_id = o.table_id
 ;
+
+
+create extension "pgcrypto"; -- passwordni shifirlab saqlash uchun
+
+create table users(
+  user_id serial not null primary key,
+  username varchar(30) not null,
+  password varchar(60) not null
+);
+
+insert into users(username, password) values
+('abdulloh', crypt('1234', gen_salt('bf')));
+
+select user_id, username from users where username = 'abdulloh' and password = crypt('1234', password);
